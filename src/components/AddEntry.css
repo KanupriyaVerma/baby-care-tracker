@@ -1,0 +1,45 @@
+.form-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.type-buttons {
+  margin-bottom: 15px;
+}
+
+.type-buttons button {
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ff6b6b;
+  background: white;
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.type-buttons button.active {
+  background: #ff6b6b;
+  color: white;
+}
+
+.input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.add-btn {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
