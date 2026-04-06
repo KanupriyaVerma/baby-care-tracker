@@ -43,3 +43,16 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+
+.addbtn {
+  width: 100%;
+  padding: 6px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}

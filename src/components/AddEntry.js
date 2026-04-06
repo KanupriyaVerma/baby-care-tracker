@@ -18,7 +18,11 @@ function AddEntry({ entries, setEntries }) {
       time: time,
     };
 
-    setEntries([...entries, newEntry]);
+    setEntries((prevEntries) => {
+      const updated = [...prevEntries, newEntry];
+      localStorage.setItem("babyData", JSON.stringify(updated)); // FORCE SAVE
+      return updated;
+    });
 
     setSelectedType("");
     setNote("");

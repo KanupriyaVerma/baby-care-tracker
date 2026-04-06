@@ -1,8 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import AddEntry from "./components/AddEntry";
 
 function App() {
   const [entries, setEntries] = useState([]);
+  const isFirstLoad = useRef(true);
+    
+  useEffect(() => {
+    try {
+      const savedData = localStorage.getItem("babyData");
+      if (savedData) {
+        setEntries(JSON.parse(savedData));
+      }
+    } catch (error) {
+      console.error("Error loading data", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false;
+      return;
+    }
+
+    localStorage.setItem("babyData", JSON.stringify(entries));
+  }, [entries]);
+
+  const handleDelete = (indexToDelete) => {
+      const updatedData = entries.filter((_, index) => index !== indexToDelete);
+      setEntries(updatedData);
+    };
 
   return (
     <div style={{
@@ -81,7 +107,7 @@ function App() {
               }}>
                 {entry.note || "No notes"}
               </p>
-
+              <button className="addbtn" onClick={() => handleDelete(index)}>Delete</button>
             </div>
             ))
           )}
