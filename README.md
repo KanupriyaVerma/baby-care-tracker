@@ -4,7 +4,8 @@ A simple and clean React app to track baby activities like feeding, sleep, and d
 
 ## 🚀 Live Demo
 
-👉 https://baby-care-tracker-kanu.netlify.app/
+Vercel (Primary): https://baby-care-tracker-seven.vercel.app/
+Netlify (Backup): https://baby-care-tracker-kanu.netlify.app/
 
 ---
 
